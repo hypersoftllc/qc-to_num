@@ -39,7 +39,6 @@
     "travisci": "npm test"
   },
   "jest": {
-    "verbose": true,
     "transform": {
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
