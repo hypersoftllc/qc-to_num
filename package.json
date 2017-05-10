@@ -1,6 +1,6 @@
 {
   "name": "qc-to_num",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": {
     "name": "Danny Hurlburt",
     "url": "https://github.com/dhurlburtusa"
@@ -39,7 +39,6 @@
     "travisci": "npm test"
   },
   "jest": {
-    "verbose": true,
     "transform": {
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
