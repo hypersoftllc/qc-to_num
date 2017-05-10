@@ -2,6 +2,9 @@
 
 A simple JavaScript utility to convert various values to a number.
 
+[![Build Status](https://travis-ci.org/hypersoftllc/qc-to_num.svg?branch=master)](https://travis-ci.org/hypersoftllc/qc-to_num)
+
+
 **What it does that `parseFloat` doesn't**
 
 * Allow a default value to be set instead of returning `NaN`.
