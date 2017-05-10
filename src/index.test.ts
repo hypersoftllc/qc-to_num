@@ -224,12 +224,90 @@ describe('qc-to_num', () => {
     });
 
     it('called with `-Infinity` should return `-Infinity`', () => {
-      let toValue = toNum(-Infinity);
+      const input = -Infinity;
+      let toValue: any;
+
+      toValue = toNum(input);
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { def: NaN });
+      expect(toValue).toEqual(-Infinity);
+
+      toValue = toNum(input, { def: 0 });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { def: 123456.7 });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { def: '' });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { def: false });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { def: null });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { def: undefined });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { exp: Infinity });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { exp: 2 });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { exp: 0 });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { exp: -2 });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { exp: -Infinity });
       expect(toValue).toBe(-Infinity);
     });
 
     it('called with `"-Infinity"` should return `-Infinity`', () => {
-      let toValue = toNum('-Infinity');
+      const input = '-Infinity';
+      let toValue: any;
+
+      toValue = toNum(input);
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { def: NaN });
+      expect(toValue).toEqual(-Infinity);
+
+      toValue = toNum(input, { def: 0 });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { def: 123456.7 });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { def: '' });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { def: false });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { def: null });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { def: undefined });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { exp: Infinity });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { exp: 2 });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { exp: 0 });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { exp: -2 });
+      expect(toValue).toBe(-Infinity);
+
+      toValue = toNum(input, { exp: -Infinity });
       expect(toValue).toBe(-Infinity);
     });
 
@@ -238,6 +316,27 @@ describe('qc-to_num', () => {
       let toValue: any;
 
       toValue = toNum(input);
+      expect(toValue).toBe(-Number.POSITIVE_INFINITY);
+
+      toValue = toNum(input, { def: NaN });
+      expect(toValue).toEqual(-Number.POSITIVE_INFINITY);
+
+      toValue = toNum(input, { def: 0 });
+      expect(toValue).toBe(-Number.POSITIVE_INFINITY);
+
+      toValue = toNum(input, { def: 123456.7 });
+      expect(toValue).toBe(-Number.POSITIVE_INFINITY);
+
+      toValue = toNum(input, { def: '' });
+      expect(toValue).toBe(-Number.POSITIVE_INFINITY);
+
+      toValue = toNum(input, { def: false });
+      expect(toValue).toBe(-Number.POSITIVE_INFINITY);
+
+      toValue = toNum(input, { def: null });
+      expect(toValue).toBe(-Number.POSITIVE_INFINITY);
+
+      toValue = toNum(input, { def: undefined });
       expect(toValue).toBe(-Number.POSITIVE_INFINITY);
 
       toValue = toNum(input, { exp: Infinity });
@@ -261,6 +360,27 @@ describe('qc-to_num', () => {
       let toValue: any;
 
       toValue = toNum(input);
+      expect(toValue).toBe(Number.NEGATIVE_INFINITY);
+
+      toValue = toNum(input, { def: NaN });
+      expect(toValue).toEqual(Number.NEGATIVE_INFINITY);
+
+      toValue = toNum(input, { def: 0 });
+      expect(toValue).toBe(Number.NEGATIVE_INFINITY);
+
+      toValue = toNum(input, { def: 123456.7 });
+      expect(toValue).toBe(Number.NEGATIVE_INFINITY);
+
+      toValue = toNum(input, { def: '' });
+      expect(toValue).toBe(Number.NEGATIVE_INFINITY);
+
+      toValue = toNum(input, { def: false });
+      expect(toValue).toBe(Number.NEGATIVE_INFINITY);
+
+      toValue = toNum(input, { def: null });
+      expect(toValue).toBe(Number.NEGATIVE_INFINITY);
+
+      toValue = toNum(input, { def: undefined });
       expect(toValue).toBe(Number.NEGATIVE_INFINITY);
 
       toValue = toNum(input, { exp: Infinity });
@@ -334,6 +454,27 @@ describe('qc-to_num', () => {
       toValue = toNum(input);
       expect(toValue).toBe(Infinity);
 
+      toValue = toNum(input, { def: NaN });
+      expect(toValue).toEqual(Infinity);
+
+      toValue = toNum(input, { def: 0 });
+      expect(toValue).toBe(Infinity);
+
+      toValue = toNum(input, { def: 123456.7 });
+      expect(toValue).toBe(Infinity);
+
+      toValue = toNum(input, { def: '' });
+      expect(toValue).toBe(Infinity);
+
+      toValue = toNum(input, { def: false });
+      expect(toValue).toBe(Infinity);
+
+      toValue = toNum(input, { def: null });
+      expect(toValue).toBe(Infinity);
+
+      toValue = toNum(input, { def: undefined });
+      expect(toValue).toBe(Infinity);
+
       toValue = toNum(input, { exp: Infinity });
       expect(toValue).toBe(Infinity);
 
@@ -357,6 +498,27 @@ describe('qc-to_num', () => {
       toValue = toNum(input);
       expect(toValue).toBe(Infinity);
 
+      toValue = toNum(input, { def: NaN });
+      expect(toValue).toEqual(Infinity);
+
+      toValue = toNum(input, { def: 0 });
+      expect(toValue).toBe(Infinity);
+
+      toValue = toNum(input, { def: 123456.7 });
+      expect(toValue).toBe(Infinity);
+
+      toValue = toNum(input, { def: '' });
+      expect(toValue).toBe(Infinity);
+
+      toValue = toNum(input, { def: false });
+      expect(toValue).toBe(Infinity);
+
+      toValue = toNum(input, { def: null });
+      expect(toValue).toBe(Infinity);
+
+      toValue = toNum(input, { def: undefined });
+      expect(toValue).toBe(Infinity);
+
       toValue = toNum(input, { exp: Infinity });
       expect(toValue).toBe(Infinity);
 
@@ -378,6 +540,27 @@ describe('qc-to_num', () => {
       let toValue: any;
 
       toValue = toNum(input);
+      expect(toValue).toBe(Number.POSITIVE_INFINITY);
+
+      toValue = toNum(input, { def: NaN });
+      expect(toValue).toEqual(Number.POSITIVE_INFINITY);
+
+      toValue = toNum(input, { def: 0 });
+      expect(toValue).toBe(Number.POSITIVE_INFINITY);
+
+      toValue = toNum(input, { def: 123456.7 });
+      expect(toValue).toBe(Number.POSITIVE_INFINITY);
+
+      toValue = toNum(input, { def: '' });
+      expect(toValue).toBe(Number.POSITIVE_INFINITY);
+
+      toValue = toNum(input, { def: false });
+      expect(toValue).toBe(Number.POSITIVE_INFINITY);
+
+      toValue = toNum(input, { def: null });
+      expect(toValue).toBe(Number.POSITIVE_INFINITY);
+
+      toValue = toNum(input, { def: undefined });
       expect(toValue).toBe(Number.POSITIVE_INFINITY);
 
       toValue = toNum(input, { exp: Infinity });
