@@ -775,6 +775,74 @@ describe('qc-to_num', () => {
 
     });
 
+    it('called with an unparsible string value, a default value, and a rounding exponent should return default value', () => {
+      const input = 'foo';
+      let toValue: any;
+
+      toValue = toNum(input, { def: NaN, exp: -2 });
+      expect(toValue).toEqual(NaN);
+
+      toValue = toNum(input, { def: NaN, exp: 0 });
+      expect(toValue).toEqual(NaN);
+
+      toValue = toNum(input, { def: NaN, exp: 2 });
+      expect(toValue).toEqual(NaN);
+
+      toValue = toNum(input, { def: 0, exp: -2 });
+      expect(toValue).toBe(0);
+
+      toValue = toNum(input, { def: 0, exp: 0 });
+      expect(toValue).toBe(0);
+
+      toValue = toNum(input, { def: 0, exp: 2 });
+      expect(toValue).toBe(0);
+
+      toValue = toNum(input, { def: 123456.7, exp: -2 });
+      expect(toValue).toBe(123456.7);
+
+      toValue = toNum(input, { def: 123456.7, exp: 0 });
+      expect(toValue).toBe(123456.7);
+
+      toValue = toNum(input, { def: 123456.7, exp: 2 });
+      expect(toValue).toBe(123456.7);
+
+      toValue = toNum(input, { def: '', exp: -2 });
+      expect(toValue).toBe('');
+
+      toValue = toNum(input, { def: '', exp: 0 });
+      expect(toValue).toBe('');
+
+      toValue = toNum(input, { def: '', exp: 2 });
+      expect(toValue).toBe('');
+
+      toValue = toNum(input, { def: false, exp: -2 });
+      expect(toValue).toBe(false);
+
+      toValue = toNum(input, { def: false, exp: 0 });
+      expect(toValue).toBe(false);
+
+      toValue = toNum(input, { def: false, exp: 2 });
+      expect(toValue).toBe(false);
+
+      toValue = toNum(input, { def: null, exp: -2 });
+      expect(toValue).toBeNull();
+
+      toValue = toNum(input, { def: null, exp: 0 });
+      expect(toValue).toBeNull();
+
+      toValue = toNum(input, { def: null, exp: 2 });
+      expect(toValue).toBeNull();
+
+      toValue = toNum(input, { def: undefined, exp: -2 });
+      expect(toValue).toBeUndefined();
+
+      toValue = toNum(input, { def: undefined, exp: 0 });
+      expect(toValue).toBeUndefined();
+
+      toValue = toNum(input, { def: undefined, exp: 2 });
+      expect(toValue).toBeUndefined();
+    });
+
   });
 
   describe('`to_num`', () => {

@@ -45,7 +45,7 @@ function toNum(input?: any, opts?: { def?: any, exp?: any }): any {
       input = input.valueOf();
       output = parseFloat(input);
       if (isNaN(output)) {
-        output = def;
+        return def;
       }
     }
   }
