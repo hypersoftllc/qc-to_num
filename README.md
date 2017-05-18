@@ -1,6 +1,6 @@
 # qc-to_num
 
-[![Build Status](https://travis-ci.org/hypersoftllc/qc-to_num.svg?branch=master)](https://travis-ci.org/hypersoftllc/qc-to_num)
+[![Build Status][travis-svg]][travis-url]
 
 A simple JavaScript utility to convert various values to a number.
 
@@ -31,3 +31,7 @@ toNum('+3.1459');  // 3.1459
 toNum('-2.6');  // -2.6
 toNum(-2.6);    // -2.6
 ```
+
+
+[travis-svg]: https://travis-ci.org/hypersoftllc/qc-to_num.svg?branch=master
+[travis-url]: https://travis-ci.org/hypersoftllc/qc-to_num
