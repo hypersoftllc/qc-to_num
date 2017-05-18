@@ -1,6 +1,7 @@
 # qc-to_num
 
 [![Build Status][travis-svg]][travis-url]
+[![License][license-image]][license-url]
 
 A simple JavaScript utility to convert various values to a number.
 
@@ -32,6 +33,7 @@ toNum('-2.6');  // -2.6
 toNum(-2.6);    // -2.6
 ```
 
-
+[license-image]: http://img.shields.io/npm/l/qc-to_num.svg
+[license-url]: LICENSE
 [travis-svg]: https://travis-ci.org/hypersoftllc/qc-to_num.svg?branch=master
 [travis-url]: https://travis-ci.org/hypersoftllc/qc-to_num
