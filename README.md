@@ -1,6 +1,7 @@
 # qc-to_num
 
 [![Build Status][travis-svg]][travis-url]
+[![Coverage Status][coverage-image]][coverage-url]
 [![License][license-image]][license-url]
 [![Downloads][downloads-image]][downloads-url]
 
@@ -37,6 +38,8 @@ toNum(-2.6);    // -2.6
 ```
 
 
+[coverage-image]: https://coveralls.io/repos/github/hypersoftllc/qc-to_num/badge.svg?branch=master
+[coverage-url]: https://coveralls.io/github/hypersoftllc/qc-to_num?branch=master
 [downloads-image]: http://img.shields.io/npm/dm/qc-to_num.svg
 [downloads-url]: http://npm-stat.com/charts.html?package=qc-to_num
 [license-image]: http://img.shields.io/npm/l/qc-to_num.svg
