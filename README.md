@@ -4,6 +4,8 @@
 [![License][license-image]][license-url]
 [![Downloads][downloads-image]][downloads-url]
 
+[![npm badge][npm-badge-png]][package-url]
+
 A simple JavaScript utility to convert various values to a number.
 
 **What it does that `parseFloat` doesn't**
@@ -39,5 +41,7 @@ toNum(-2.6);    // -2.6
 [downloads-url]: http://npm-stat.com/charts.html?package=qc-to_num
 [license-image]: http://img.shields.io/npm/l/qc-to_num.svg
 [license-url]: LICENSE
+[package-url]: https://npmjs.org/package/qc-to_num
+[npm-badge-png]: https://nodei.co/npm/qc-to_num.png?downloads=true&stars=true
 [travis-svg]: https://travis-ci.org/hypersoftllc/qc-to_num.svg?branch=master
 [travis-url]: https://travis-ci.org/hypersoftllc/qc-to_num
