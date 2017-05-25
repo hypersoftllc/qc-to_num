@@ -37,7 +37,7 @@ npm install --save qc-to_num
 ## Example Usage
 
 ```js
-import { toNum } from 'qc-to_num';
+import { toNum, toNumOrNull } from 'qc-to_num';
 
 toNum('+3.1459');                            // `3.1459`
 toNum('2');                                  // `2`

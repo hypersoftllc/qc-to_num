@@ -21,6 +21,8 @@
  * 4) Correctly handles `'-0'` which returns `0' instead of `-0`.
  *
  * ```js
+ * import { toNum, toNumOrNull } from 'qc-to_num';
+ *
  * toNum('+3.1459');                             // `3.1459`
  * toNum('2');                                   // `2`
  * toNum(2.6);                                   // `2.6`
