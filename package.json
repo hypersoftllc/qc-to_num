@@ -56,10 +56,6 @@
       "tsx"
     ]
   },
-  "dependencies": {
-    "qc-round": "^0.0.5",
-    "qc-type_of": "^1.0.0"
-  },
   "devDependencies": {
     "@types/jest": "^19.2.2",
     "coveralls": "^2.13.1",
