@@ -13,6 +13,18 @@ A simple JavaScript utility to convert various values to a number.
 
 * Allow a default value to be set instead of returning `NaN`.
 * Convert `'-0'` to `0` instead of `-0`.
+* Allow an input with a valueOf function to supply the convertible value.
+
+**What it does that `new Number` doesn't**
+
+* Won't return a `Number` instance with convert.
+* Allow a default value to be set instead of returning `NaN`.
+* Convert `'-0'` to `0` instead of `-0`.
+
+**What it does that `Number` doesn't**
+
+* Allow a default value to be set instead of returning `NaN`.
+* Convert `'-0'` to `0` instead of `-0`.
 
 
 ## Installation
@@ -27,14 +39,40 @@ npm install --save qc-to_num
 ```js
 import { toNum } from 'qc-to_num';
 
-toNum();        // `null`
-toNum('');      // `null`
-toNum('', { def: 0 }); // `0`
-toNum(NaN);     // `null`
-toNum(null);    // `null`
-toNum('+3.1459');  // 3.1459
-toNum('-2.6');  // -2.6
-toNum(-2.6);    // -2.6
+toNum('+3.1459');                               // `3.1459`
+toNum('2');                                     // `2`
+toNum(2.6);                                     // `2.6`
+toNum(1.2);                                     // `1.2`
+toNum(1);                                       // `1`
+toNum(-1);                                      // `-1`
+toNum(-2.6);                                    // `-2.6`
+toNum({ valueOf() { return 42; } });            // `42`
+toNum({ valueOf() { return '42'; } });          // `42`
+
+toNum(&lt;non-convertible>);                       // The non-convertible input
+toNum(&lt;non-convertible>, undefined);            // The non-convertible input
+toNum(&lt;non-convertible>, { def: undefined });   // The non-convertible input
+
+toNum(&lt;non-convertible>, null);                 // `null`
+toNum(&lt;non-convertible>, { def: null });        // `null`
+toNumOrNull(&lt;non-convertible>);                 // `null`
+
+toNum(&lt;non-convertible>, 0);                    // `0`
+toNum(&lt;non-convertible>, { def: 0 });           // `0`
+
+toNum(&lt;non-convertible>, NaN);                  // `NaN`
+toNum(&lt;non-convertible>, { def: NaN });         // `NaN`
+
+toNum();                                        // `undefined`
+toNumOrNull();                                  // `null`
+
+toNum(NaN);                                     // `NaN`
+toNum(NaN, null);                               // `null`
+toNumOrNull(NaN);                               // `null`
+
+toNum('');                                      // `''`
+toNum('', null);                                // `null`
+toNumOrNull('');                                // `null`
 ```
 
 

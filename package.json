@@ -12,8 +12,8 @@
     "conversion",
     "javascript",
     "number",
-    "to_num",
     "toNum",
+    "toNumOrNull",
     "typescript",
     "utility"
   ],
